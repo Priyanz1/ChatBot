@@ -10,8 +10,8 @@ const app=express();
 app.set("trust proxy", 1); 
 
 const limiter = rateLimit({
-  windowMs: 1 * 60 * 1000, 
-  limit: 2, // har IP ko 15 min me 100 requests
+  windowMs: 15 * 60 * 1000, 
+  limit: 100, // har IP ko 15 min me 100 requests
   message: {
     success: false,
     msg: "Bhai thoda dheere, bahut zyada requests aa rahi hai",
